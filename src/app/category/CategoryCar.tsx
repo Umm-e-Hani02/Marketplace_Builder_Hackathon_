@@ -35,16 +35,13 @@ export default async function CategoryCar() {
   );
   return (
     <>
-      <div className="flex justify-between px-5 md:px-16 my-8 md:my-5">
-        <h3 className="text-[#90A3BF] lg:ml-24 xl:ml-0">Recommended Car</h3>
-      </div>
 
       {/* For large screens */}
       <div className="md:grid md:grid-cols-2 md:m-auto xl:grid-cols-3 px-5 gap-x-7 hidden">
         {cars.map((car: Car) => (
           <div
             key={car._id}
-            className="md:w-[304px] h-[300px] md:h-[410px] rounded-md flex flex-col bg-white p-5 mx-auto mb-5"
+            className="md:w-[304px] h-[300px] md:h-[410px] rounded-md flex flex-col bg-white p-5 mx-auto my-5"
           >
             {/* Header Section */}
             <div className="flex justify-between items-start">
