@@ -3,6 +3,19 @@ import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 import Link from "next/link";
 
+interface Car {
+  _id: string;
+  name: string;
+  type: string;
+  fuelCapacity: string;
+  transmission: string;
+  seatingCapacity: number;
+  pricePerDay: string;
+  originalPrice: string;
+  image_url: string;
+  slug: string;
+}
+
 export default async function PopularCars() {
   const cars = await client.fetch(
     `*[_type=='car'][0...4]
@@ -31,7 +44,7 @@ export default async function PopularCars() {
 
       {/* For large screens */}
       <div className="md:grid md:grid-cols-2 md:m-auto lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-10 px-7 hidden">
-        {cars.map((car: any) => (
+        {cars.map((car: Car) => (
           <div
             key={car._id}
             className="md:w-[304px] h-[300px] md:h-[410px] rounded-md flex flex-col bg-white p-5 mx-auto my-3"
@@ -114,9 +127,9 @@ export default async function PopularCars() {
 
       {/* For small screens */}
       <div className="md:hidden px-3">
-        {cars.map((car: any) => (
+        {cars.map((car: Car) => (
           <div
-            key={car.id}
+            key={car._id}
             className="w-full bg-white rounded-lg shadow-lg flex flex-col my-4 p-5"
           >
             {/* Header Section */}
