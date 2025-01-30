@@ -1,6 +1,4 @@
 import { Menu } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Search, SlidersHorizontalIcon } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Slider } from "@/components/ui/slider";
 import Image from "next/image";
