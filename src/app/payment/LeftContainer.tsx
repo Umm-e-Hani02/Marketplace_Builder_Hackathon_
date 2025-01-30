@@ -304,7 +304,7 @@ export default function LeftContainer() {
             </p>
           </div>
 
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white w-[140px] h-14 rounded-xl mt-5">
+          <Button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white w-[140px] h-14 rounded-xl mt-5">
             Rent Now
           </Button>
 
