@@ -2,7 +2,6 @@ import TopBar from "@/components/Topbar";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import ResponsiveNavbar from "./CategoryResponsiveNavbar";
-import CategoryHero from "./CategoryHero";
 import CategoryCar from "./CategoryCar";
 export default function Category() {
   return (
@@ -20,10 +19,7 @@ export default function Category() {
         <Sidebar />
         <ResponsiveNavbar />
 
-        <div className="flex flex-col">
-          <CategoryHero />
           <CategoryCar />
-        </div>
       </div>
     </section>
   );
