@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 export default function DashboardSidebar() {
   return (
@@ -38,7 +39,12 @@ export default function DashboardSidebar() {
                         : "text-[#90A3BF] hover:bg-[#3563E9] hover:text-white"
                     }`}
                   >
-                    <img src={item.src} alt={item.label} />
+                    <Image
+                      src={item.src}
+                      alt={item.label}
+                      height={22}
+                      width={22}
+                    />
                     {item.label}
                   </Link>
                 ))}
@@ -64,10 +70,12 @@ export default function DashboardSidebar() {
                     href={item.href}
                     className="flex items-center gap-2 p-2 rounded-xl text-[#90A3BF] hover:bg-[#3563E9] hover:text-white"
                   >
-                    <img
+                    <Image
                       src={item.src}
                       alt={item.label}
                       aria-label={item.label}
+                      height={21}
+                      width={21}
                     />
                     {item.label}
                   </Link>
@@ -75,12 +83,19 @@ export default function DashboardSidebar() {
 
                 {/* Dark Mode Toggle */}
                 <div className="flex items-center gap-2 p-2 rounded-xl text-[#90A3BF] hover:bg-[#3563E9] hover:text-white">
-                  <img src="/assets/briefcase.png" alt="Dark Mode" />
+                  <Image
+                    src="/assets/briefcase.png"
+                    alt="Dark Mode"
+                    height={22}
+                    width={22}
+                  />
                   Dark Mode
-                  <img
+                  <Image
                     className="ml-auto lg:pr-1 hover:cursor-pointer"
                     src="/assets/darklight-mode.png"
                     alt="Toggle Dark Mode"
+                    height={65}
+                    width={65}
                   />
                 </div>
               </div>
@@ -90,10 +105,12 @@ export default function DashboardSidebar() {
           {/* Logout */}
           <div className="mt-10">
             <p className="w-56 flex items-center gap-2 p-2 rounded-xl text-[#90A3BF] hover:bg-[#3563E9] hover:text-white ml-6 lg:ml-2 xl:ml-6">
-              <img
+              <Image
                 src="/assets/logout.png"
                 alt="Log Out"
                 aria-label="Log Out"
+                height={23}
+                width={23}
               />
               Log Out
             </p>
