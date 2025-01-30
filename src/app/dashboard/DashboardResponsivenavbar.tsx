@@ -104,10 +104,12 @@ export default function ResponsiveNavbar() {
                       aria-label="Dark Mode"
                     />
                     Dark Mode
-                    <img
+                    <Image
                       className="ml-2 hover:cursor-pointer"
                       src="/assets/darklight-mode.png"
                       alt="Toggle Dark Mode"
+                      height={20}
+                      width={20}
                     />
                   </div>
                   <div className="mt-10 -ml-6">
