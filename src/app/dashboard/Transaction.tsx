@@ -2,8 +2,16 @@ import { Circle } from "lucide-react";
 import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 
+interface DashboardData {
+  "Car Image": string;
+  carname: string;
+  category: string;
+  date: string;
+  price: string;
+}
+
 export default async function Transaction() {
-  const query = await client.fetch(`*[_type == "dashboard"]{
+  const query: DashboardData[] = await client.fetch(`*[_type == "dashboard"]{
   "Car Image": car.asset->url,
   carname,
   category,
@@ -96,7 +104,7 @@ export default async function Transaction() {
           </span>
         </div>
         <div className="w-[300px] md:h-[376px] md:w-[480px] lg:w-[360px] xl:w-[480px]">
-          {query.map((dashboard: any, index: number) => (
+          {query.map((dashboard: DashboardData, index: number) => (
             <div
               key={index}
               className="w-[300px] md:w-full -ml-6 md:-ml-0 flex items-center justify-between p-4 border-b border-gray-200"
