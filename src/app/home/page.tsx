@@ -24,13 +24,11 @@ export default function HomePage() {
         <PopularCars />
         <RecommendedCars />
 
-        <div className="w-full md:w-[734px] h-11 flex items-center my-[25px] m-auto">
-          <Link href="/category">
-            <Button className="w-[156px] h-11 bg-[#3563E9] text-white rounded hover:bg-[#3159d1] mx-auto ml-20 md:ml-72 lg:ml-80 xl:ml-[295px]">
+      <Link href="/category">
+          <Button className="w-[156px] h-11 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded hover:bg-[#3159d1] flex mx-auto my-4 md:mb-6">
               Show More Car
-            </Button>
-          </Link>
-        </div>
+          </Button>
+      </Link>
       </div>
     </section>
   );
