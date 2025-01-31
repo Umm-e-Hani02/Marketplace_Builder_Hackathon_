@@ -128,7 +128,7 @@ export default async function CarDetail({
                 </div>
                 <div>
                   <Link href={`/payment/${detail.slug}`}>
-                    <Button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white w-[160px] h-14 text-center rounded-md">
+                    <Button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white w-[120px] h-12 md:w-[160px] md:h-14 text-center rounded-md">
                       Rent Now
                     </Button>
                   </Link>
